@@ -8,7 +8,7 @@ SHA1(minikube)= 0e30c7936b427ceb8fc6e1994a7f5afa518d19fc
 
 $ curl -O https://storage.googleapis.com/kubernetes-release/release/v1.3.0/bin/darwin/amd64/kubectl && chmod u+x kubectl
 
-➜  kubernetes ls -alrt
+$ ls -alrt
 total 252568
 -rwxr-xr-x   1 peter_v  staff  73432848 Jul  5 18:43 minikube
 -rwxr--r--   1 peter_v  staff  55849328 Jul  5 22:12 kubectl
@@ -32,7 +32,7 @@ $ export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.99.100:2376
 $ export DOCKER_HOST=tcp://192.168.99.100:2376
 $ export DOCKER_CERT_PATH=/Users/peter_v/.minikube/certs
-$ kubernetes docker ps
+$ docker ps
 CONTAINER ID        IMAGE                                                        COMMAND                  CREATED             STATUS              PORTS               NAMES
 4fb1eed617b8        gcr.io/google_containers/kubernetes-dashboard-amd64:v1.1.0   "/dashboard --port=90"   33 seconds ago      Up 33 seconds                           k8s_kubernetes-dashboard.7c69d856_kubernetes-dashboard-pwrff_kube-system_ba94d54c-42ee-11e6-95d0-3abd9441c012_0e906c14
 b137f10e0dd8        gcr.io/google_containers/pause-amd64:3.0                     "/pause"                 34 seconds ago      Up 34 seconds                           k8s_POD.2225036b_kubernetes-dashboard-pwrff_kube-system_ba94d54c-42ee-11e6-95d0-3abd9441c012_9deb9cd6
@@ -100,7 +100,7 @@ Events:
   1m    1m    1 {kubelet 127.0.0.1} spec.containers{hello-minikube} Normal    Started   Started container with docker id a3b1c2cd0dde
 
 
-➜  kubernetes nmap 192.168.99.100
+$ nmap 192.168.99.100
 
 Starting Nmap 7.12 ( https://nmap.org ) at 2016-07-05 22:32 CEST
 Nmap scan report for 192.168.99.100
